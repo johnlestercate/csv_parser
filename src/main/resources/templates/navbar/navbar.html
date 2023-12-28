@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:insert="fragments/head :: head"> </head>
+
+<body>
+
+<nav th:fragment="navbar" class="navbar navbar-expand-md bg-dark navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" th:href="@{/api/csv/upload}">Toyota San Jose Del Monte, Bulacan</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="nav-link" th:href="@{/api/csv/all}">Application List</a></li>
+
+      <li><a class="nav-link" th:href="@{/api/csv/upload}">Upload File</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+</body>
+</html>

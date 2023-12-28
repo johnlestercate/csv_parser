@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <title>Toyota Camille Gandeza</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<div th:insert="navbar/navbar :: navbar">  </div>
+<div class="container">
+    <form th:action="@{/api/csv/updateDetails/{id}(id=${detail.id})}" th:object="${detail}" method="post">
+        <div class="row">
+            <div class="col">
+        <div class="bg-danger text-center">
+            <h2> Principal Borrower </h2>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="fName">First Name</label>
+                <input id="fName" type="text" th:field="*{pFname}" class="form-control"  placeholder="First Name" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="mName">Middle Name</label>
+                <input id="mName" type="text" th:field="*{pMname}" class="form-control" placeholder="Middle Name" />
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <label for="lName">Last Name</label>
+                <input id="lName" type="text" th:field="*{pLname}" class="form-control" placeholder="Last Name" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pDob">Date of Birth</label>
+                <input id="pDob" type="text" th:field="*{pDob}" class="form-control" placeholder="Date of Birth" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pPob">Place of Birth</label>
+                <input id="pPob" type="text" th:field="*{pPob}" class="form-control" placeholder="Place of Birth" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pStatus">Marital Status</label>
+                <input id="pStatus" type="text" th:field="*{pStatus}" class="form-control" placeholder="Marital Status" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pCitizenship">Citizenship</label>
+                <input id="pCitizenship" type="text" th:field="*{pCitizenship}" class="form-control" placeholder="Citizenship" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pTinNo">Tin No:</label>
+                <input id="pTinNo" type="text" th:field="*{pTinNo}" class="form-control" placeholder="Tin No:" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pSssNo">SSS No:</label>
+                <input id="pSssNo" type="text" th:field="*{pSssNo}" class="form-control" placeholder="SSS No:" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pTelNo">SSS No:</label>
+                <input id="pTelNo" type="text" th:field="*{pTelNo}" class="form-control" placeholder="Telephone No:" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pMobileNo">Mobile No:</label>
+                <input id="pMobileNo" type="text" th:field="*{pMobileNo}" class="form-control" placeholder="Mobile No:" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pEmailAdd">Email Address</label>
+                <input id="pEmailAdd" type="text" th:field="*{pEmailAdd}" class="form-control" placeholder="Email Address" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pMotherMaiden">Mothers Maiden</label>
+                <input id="pMotherMaiden" type="text" th:field="*{pMotherMaiden}" class="form-control" placeholder="Mothers Maiden" />
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="pNoOfYrsStayed">Length Of Stay</label>
+                <input id="pNoOfYrsStayed" type="text" th:field="*{pNoOfYrsStayed}" class="form-control" placeholder="Length Of Stay" />
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" type="text" th:field="*{pAddress}" class="form-control" placeholder="Last Name" />
+            </div>
+            </div>
+
+            <div class="col">
+                    <div class="bg-danger text-center">
+                        <h2> Co-Borrower </h2>
+                    </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="cFName">First Name</label>
+                                <input id="cFName" type="text" th:field="*{cFname}" class="form-control"  placeholder="First Name" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cMName">Middle Name</label>
+                                <input id="cMName" type="text" th:field="*{cMname}" class="form-control" placeholder="Middle Name" />
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="cLName">Last Name</label>
+                                <input id="cLName" type="text" th:field="*{cLname}" class="form-control" placeholder="Last Name" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cDob">Date of Birth</label>
+                                <input id="cDob" type="text" th:field="*{cDob}" class="form-control" placeholder="Date of Birth" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cPob">Place of Birth</label>
+                                <input id="cPob" type="text" th:field="*{cPob}" class="form-control" placeholder="Place of Birth" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cStatus">Marital Status</label>
+                                <input id="cStatus" type="text" th:field="*{cRelationToPrincipal}" class="form-control" placeholder="Marital Status" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cCitizenship">Citizenship</label>
+                                <input id="cCitizenship" type="text" th:field="*{cCitizenship}" class="form-control" placeholder="Citizenship" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cTinNo">Tin No:</label>
+                                <input id="cTinNo" type="text" th:field="*{cTinNo}" class="form-control" placeholder="Tin No:" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cSssNo">SSS No:</label>
+                                <input id="cSssNo" type="text" th:field="*{cSssNo}" class="form-control" placeholder="SSS No:" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cTelNo">SSS No:</label>
+                                <input id="cTelNo" type="text" th:field="*{cTelNo}" class="form-control" placeholder="Telephone No:" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cMobileNo">Mobile No:</label>
+                                <input id="cMobileNo" type="text" th:field="*{cMobileNo}" class="form-control" placeholder="Mobile No:" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cEmailAdd">Email Address</label>
+                                <input id="cEmailAdd" type="text" th:field="*{cEmailAdd}" class="form-control" placeholder="Email Address" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cMotherMaiden">Mothers Maiden</label>
+                                <input id="cMotherMaiden" type="text" th:field="*{cMotherMaiden}" class="form-control" placeholder="Mothers Maiden" />
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="cNoOfYrsStayed">Length Of Stay</label>
+                                <input id="cNoOfYrsStayed" type="text" th:field="*{cNoOfYrsStayed}" class="form-control" placeholder="Length Of Stay" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cAddress">Address</label>
+                            <textarea id="cAddress" type="text" th:field="*{cAddress}" class="form-control" placeholder="Last Name" />
+                        </div>
+
+            </div>
+
+            <div class="w-100">
+                <div class="bg-danger text-center">
+                    <h2> Employment/Business Information </h2>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="pebiEmploymentBusinessName">Employment/ Business Name</label>
+                    <input id="pebiEmploymentBusinessName" type="text" th:field="*{pebiEmploymentBusinessName}" class="form-control" placeholder="Employment/ Business Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pebiBusinessAddress">Employment/ Business Address</label>
+                    <input id="pebiBusinessAddress" type="text" th:field="*{pebiBusinessAddress}" class="form-control" placeholder="Employment/ Business Address" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pebiPosition">Position</label>
+                    <input id="pebiPosition" type="text" th:field="*{pebiPosition}" class="form-control" placeholder="Position" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiTelNo">Telephone No:</label>
+                    <input id="pebiTelNo" type="text" th:field="*{pebiTelNo}" class="form-control" placeholder="Telephone No:" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiLos">Length of Stay</label>
+                    <input id="pebiLos" type="text" th:field="*{pebiLos}" class="form-control" placeholder="Length of Stay" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiMonthlyIncome">Monthly Income</label>
+                    <input id="pebiMonthlyIncome" type="text" th:field="*{pebiMonthlyIncome}" class="form-control" placeholder="Monthly Income" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherSource">Other Source of Income</label>
+                    <input id="pebiOtherSource" type="text" th:field="*{pebiOtherSource}" class="form-control" placeholder="Other Source of Income" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherSourceAddress">Address</label>
+                    <input id="pebiOtherSourceAddress" type="text" th:field="*{pebiOtherSourceAddress}" class="form-control" placeholder="Address" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherSourcePosition">Position</label>
+                    <input id="pebiOtherSourcePosition" type="text" th:field="*{pebiOtherSourcePosition}" class="form-control" placeholder="Position" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherSourceTelNo">Telephone No:</label>
+                    <input id="pebiOtherSourceTelNo" type="text" th:field="*{pebiOtherSourceTelNo}" class="form-control" placeholder="Telephone No:"/>
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherLos">Length of Stay</label>
+                    <input id="pebiOtherLos" type="text" th:field="*{pebiOtherLos}" class="form-control" placeholder="Length of Stay" />
+                </div>
+                <div class="form-group">
+                    <label for="pebiOtherMonthlIncome">Monthly Income</label>
+                    <input id="pebiOtherMonthlIncome" type="text" th:field="*{pebiOtherMonthlIncome}" class="form-control" placeholder="Monthly Income" />
+                </div>
+            </div>
+
+            <div class="col">
+
+                <div class="form-group">
+                    <label for="copebiEmploymentBusinessName">Employment/ Business Name</label>
+                    <input id="copebiEmploymentBusinessName" type="text" th:field="*{copebiEmploymentBusinessName}" class="form-control" placeholder="Employment/ Business Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="copebiBusinessAddress">Employment/ Business Address</label>
+                    <input id="copebiBusinessAddress" type="text" th:field="*{copebiBusinessAddress}" class="form-control" placeholder="Employment/ Business Address" />
+                </div>
+
+                <div class="form-group">
+                    <label for="copebiPosition">Position</label>
+                    <input id="copebiPosition" type="text" th:field="*{copebiPosition}" class="form-control" placeholder="Position" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiTelNo">Telephone No:</label>
+                    <input id="copebiTelNo" type="text" th:field="*{copebiTelNo}" class="form-control" placeholder="Telephone No:" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiLos">Length of Stay</label>
+                    <input id="copebiLos" type="text" th:field="*{copebiLos}" class="form-control" placeholder="Length of Stay" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiMonthlyIncome">Monthly Income</label>
+                    <input id="copebiMonthlyIncome" type="text" th:field="*{copebiMonthlyIncome}" class="form-control" placeholder="Monthly Income" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherSource">Other Source of Income</label>
+                    <input id="copebiOtherSource" type="text" th:field="*{copebiOtherSource}" class="form-control" placeholder="Other Source of Income" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherSourceAddress">Address</label>
+                    <input id="copebiOtherSourceAddress" type="text" th:field="*{copebiOtherSourceAddress}" class="form-control" placeholder="Address" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherSourcePosition">Position</label>
+                    <input id="copebiOtherSourcePosition" type="text" th:field="*{copebiOtherSourcePosition}" class="form-control" placeholder="Position" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherSourceTelNo">Telephone No:</label>
+                    <input id="copebiOtherSourceTelNo" type="text" th:field="*{copebiOtherSourceTelNo}" class="form-control" placeholder="Telephone No:"/>
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherLos">Length of Stay</label>
+                    <input id="copebiOtherLos" type="text" th:field="*{copebiOtherLos}" class="form-control" placeholder="Length of Stay" />
+                </div>
+                <div class="form-group">
+                    <label for="copebiOtherMonthlIncome">Monthly Income</label>
+                    <input id="copebiOtherMonthlIncome" type="text" th:field="*{copebiOtherMonthlIncome}" class="form-control" placeholder="Monthly Income" />
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="w-100">
+                <div class="bg-danger text-center">
+                    <h2> BANK/ CREDIT REFERRENCES </h2>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="pbdBankName">Bank Name</label>
+                    <input id="pbdBankName" type="text" th:field="*{pbdBankName}" class="form-control" placeholder="Bank Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="pbdBranch">Branch</label>
+                    <input id="pbdBranch" type="text" th:field="*{pbdBranch}" class="form-control" placeholder="Branch" />
+                </div>
+                <div class="form-group">
+                    <label for="pbdAccoutNo">Account No:</label>
+                    <input id="pbdAccoutNo" type="text" th:field="*{pbdAccoutNo}" class="form-control" placeholder="Account No:" />
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="copbdBankName">Bank Name</label>
+                        <input id="copbdBankName" type="text" th:field="*{copbdBankName}" class="form-control" placeholder="Bank Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="copbdBranch">Branch</label>
+                        <input id="copbdBranch" type="text" th:field="*{copbdBranch}" class="form-control" placeholder="Branch" />
+                    </div>
+                    <div class="form-group">
+                        <label for="copbdAccoutNo">Account No:</label>
+                        <input id="copbdAccoutNo" type="text" th:field="*{copbdAccoutNo}" class="form-control" placeholder="Account No:" />
+                    </div>
+            </div>
+
+                </div>
+
+
+                <div class="w-100">
+                    <div class="bg-danger text-center">
+                        <h2> VEHICLE INFORMATION </h2>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="unit">Unit</label>
+                        <input id="unit" type="text" th:field="*{unit}" class="form-control" placeholder="Unit"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="unitPrice">Unit Price</label>
+                        <input id="unitPrice" type="text" th:field="*{unitPrice}" class="form-control" placeholder="Unit Price" />
+                    </div>
+                    <div class="form-group">
+                        <label for="downPayment">Downpayment</label>
+                        <input id="downPayment" type="text" th:field="*{downPayment}" class="form-control" placeholder="Downpayment" />
+                    </div>
+                    <div class="form-group">
+                        <label for="noOfMonths">No Of Months</label>
+                        <input id="noOfMonths" type="text" th:field="*{noOfMonths}" class="form-control" placeholder="No of Months" />
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input id="color" type="text" th:field="*{color}" class="form-control" placeholder="Color" />
+                    </div>
+                    <div class="form-group">
+                        <label for="amountFinance">Amount Finance</label>
+                        <input id="amountFinance" type="text" th:field="*{amountFinance}" class="form-control" placeholder="Amount Finance" />
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rate</label>
+                        <input id="rate" type="text" th:field="*{rate}" class="form-control" placeholder="Rate" />
+                    </div>
+                </div>
+        </div>
+        <input type="submit" value="Update Information">
+
+</form>
+
+</body>
+
+</html>
