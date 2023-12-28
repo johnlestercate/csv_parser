@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head  th:insert="fragments/head :: head"> </head>
+
+<body>
+<div th:insert="navbar/navbar :: navbar">  </div>
+<div  class="text-center alert alert-primary" id="hide" role="alert" th:text="${success}" th:if="${success}"></div>
+<div  class="text-center alert alert-primary" id="hide" role="alert" th:text="${error}" th:if="${error}"></div>
+<td>
+    <div class="container">
+    <div class="d-flex justify-content-around mt-5 ">
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"> Applicant Name </th>
+        <th scope="col"> Action </th>
+        <th scope="col"> Downloaded </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${applicationForms.empty}">
+        <td colspan="2"> No Applications Available </td>
+    </tr>
+    <tr th:each="applicationForm : ${applicationForms}">
+        <td><a  th:href="@{'/api/csv/' + ${applicationForm.id}}" th:text="${applicationForm.pFname} + ' ' + ${applicationForm.pLname}">Applicant Name</a></td>
+        <td><a  th:href="@{'/api/csv/edit/' + ${applicationForm.id}}">Edit</a> </td>
+        <td> <span th:if="${applicationForm.downloaded == true }">Yes</span></td>
+        </form></td>
+    </tr>
+    </tbody>
+</table>
+    </div>
+    </div>
+
+
+
+
+
+
+
+<!--<div th:replace="fragments/footer :: footer"></div>-->
+
+
+    <script type="text/javascript" th:src="@{/js/hide.js}"></script>
+
+
+</body>
+
+</html>
