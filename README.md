@@ -1,1 +1,5 @@
-# csv_parser
+
+Run project using
+mvn spring-boot:run
+
+
